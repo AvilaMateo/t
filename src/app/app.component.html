@@ -1,3 +1,42 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main" class="menu">
+    <div class="header pt-3">
+      <ion-toolbar>
+        <ion-row>
+
+          <ion-col size="9" class="pl-2">
+            <img src="../assets/img/logo.png" class="logo" alt="">
+          </ion-col>
+          <ion-col size="3">
+            <ion-buttons>
+              <ion-menu-button menu="main-menu" class="color"></ion-menu-button>
+            </ion-buttons>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" class="d-flex align-items-center">
+            <img src="../assets/img/avatar.svg" class="avatar mr-2" alt="">
+            <span href="" class="mt-2">User _Name</span>
+          </ion-col>
+          <hr>
+        </ion-row>
+      </ion-toolbar>
+    </div>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <!-- <ion-item routerLink="/inbox">
+            <ion-icon name=" mail" slot="start"></ion-icon>
+            <ion-label> Inbox</ion-label>
+          </ion-item> -->
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
